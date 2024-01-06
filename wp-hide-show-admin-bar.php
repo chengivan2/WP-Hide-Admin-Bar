@@ -1,9 +1,9 @@
 <?php
 /*
-Plugin Name: WP Hide and Show Admin Bar
-Description: This plugin allows the admin to enable and disable the WordPress admin bar from the frontend.
+Plugin Name: Disable Admin Bar
+Description: This plugin allows the admin to disable the WordPress admin bar from the frontend.
 Version: 1.0
-Author: Ivan Cheng'ole
+Author: Your Name
 */
 
 // Add settings page
@@ -14,7 +14,7 @@ add_action('admin_menu', 'disable_admin_bar_settings_page');
 
 // Settings page content
 function disable_admin_bar_settings_page_content() {
-    
+    ?>
     <div class="wrap">
         <h1><?php echo esc_html(get_admin_page_title()); ?></h1>
         <form action="options.php" method="post">
@@ -25,7 +25,7 @@ function disable_admin_bar_settings_page_content() {
             ?>
         </form>
     </div>
-    
+    <?php
 }
 
 // Register settings
@@ -50,3 +50,4 @@ function disable_admin_bar_on_frontend() {
     }
 }
 add_action('init', 'disable_admin_bar_on_frontend');
+?>
