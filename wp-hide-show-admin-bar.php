@@ -51,7 +51,6 @@ function disable_admin_bar_on_frontend() {
     }
 }
 add_action('init', 'disable_admin_bar_on_frontend');
-?>
 
 // Add settings link to plugins page
 function disable_admin_bar_add_settings_link($links) {
